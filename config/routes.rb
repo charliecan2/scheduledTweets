@@ -13,6 +13,10 @@ Rails.application.routes.draw do
   post 'sign_in', to: 'sessions#create'
 
   delete 'logout', to: 'sessions#destroy'
+
+  get 'password/reset', to: 'password_reset#new'
+  post 'password/reset', to: 'password_reset#create'
+
   # Defines the root path route ("/")
   root to: 'main#index'
 end
